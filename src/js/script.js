@@ -1,4 +1,3 @@
-// slider
 function slider() {
    const slider = tns({
       container: '.carousel__inner',
@@ -24,8 +23,8 @@ function tabs() {
    const tabContent = document.querySelectorAll('.catalog__content'),
       tabWrapper = document.querySelector('.catalog__tabs'),
       tabs = document.querySelectorAll('.catalog__tab'),
-      detailLinks = document.querySelectorAll('.catalog-item__link'),
-      backLinks = document.querySelectorAll('.catalog-item__back');
+      tabDetail = document.querySelectorAll('.catalog-item__link'),
+      tabBack = document.querySelectorAll('.catalog-item__back');
 
    function hideTabContent() {
       tabContent.forEach((item) => {
@@ -57,29 +56,42 @@ function tabs() {
       }
    });
 
-   // Handle clicks on detail links (open details)
-   detailLinks.forEach((link, index) => {
-      link.addEventListener('click', (e) => {
-         e.preventDefault();
-         const itemWrapper = link.closest('.catalog-item__wrapper');
-         const itemContent = itemWrapper.querySelector('.catalog-item__list');
-         const itemContentDetail = itemWrapper.querySelector('.catalog-item__content');
-         itemContent.classList.toggle('catalog-item__list_active');
-         itemContentDetail.classList.toggle('catalog-item__content_active');
-      });
-   });
+   function tabDetailsBtn() {
+      tabDetail.forEach((item) => {
+         item.addEventListener('click', (e) => {
+            const target = e.target;
+            e.preventDefault();
 
-   // Handle clicks on back links (close details)
-   backLinks.forEach((link, index) => {
-      link.addEventListener('click', (e) => {
-         e.preventDefault();
-         const itemWrapper = link.closest('.catalog-item__wrapper');
-         const itemContent = itemWrapper.querySelector('.catalog-item__list');
-         const itemContentDetail = itemWrapper.querySelector('.catalog-item__content');
-         itemContent.classList.remove('catalog-item__list_active');
-         itemContentDetail.classList.remove('catalog-item__content_active');
+            if (target && target.classList.contains('catalog-item__link')) {
+               const card = target.closest('.catalog-item');
+               if (card) {
+                  card.querySelector('.catalog-item__content').classList.toggle('catalog-item__content_active');
+                  card.querySelector('.catalog-item__list').classList.toggle('catalog-item__list_active');
+               }
+            }
+         });
       });
-   });
+   }
+
+   function tabBackBtn() {
+      tabBack.forEach((item) => {
+         item.addEventListener('click', (e) => {
+            const target = e.target;
+            e.preventDefault();
+
+            if (target && target.classList.contains('catalog-item__back')) {
+               const card = target.closest('.catalog-item');
+               if (card) {
+                  card.querySelector('.catalog-item__list').classList.toggle('catalog-item__list_active');
+                  card.querySelector('.catalog-item__content').classList.toggle('catalog-item__content_active');
+               }
+            }
+         });
+      });
+   }
+
+   tabDetailsBtn();
+   tabBackBtn();
 }
 
 tabs();
