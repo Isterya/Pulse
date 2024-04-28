@@ -1,3 +1,4 @@
+// slider
 function slider() {
    const slider = tns({
       container: '.carousel__inner',
@@ -43,7 +44,6 @@ function tabs() {
    hideTabContent();
    showTabContent();
 
-   // Handle clicks on catalog tabs
    tabWrapper.addEventListener('click', (e) => {
       const target = e.target;
       if (target && target.closest('.catalog__tab')) {
@@ -95,3 +95,58 @@ function tabs() {
 }
 
 tabs();
+
+// Modal
+function modal(triggerSelector) {
+   const overlay = document.querySelector('.overlay'),
+      modals = document.querySelectorAll('.modal');
+
+   function showModal(modalId) {
+      overlay.style.display = 'block';
+      const modal = document.getElementById(modalId);
+      modal.style.display = 'block';
+      modal.classList.add('fadeIn');
+      document.body.style.overflow = 'hidden';
+   }
+
+   function hideModal() {
+      overlay.classList.add('fadeOut');
+      setTimeout(() => {
+         overlay.style.display = 'none';
+         overlay.classList.remove('fadeOut');
+         document.body.style.overflow = '';
+         modals.forEach((modal) => {
+            modal.style.display = 'none';
+            modal.classList.remove('fadeIn');
+         });
+      }, 400);
+   }
+
+   document.addEventListener('click', (e) => {
+      const target = e.target;
+      if (target.matches(triggerSelector)) {
+         const modalId = target.dataset.modal;
+         if (modalId) {
+            showModal(modalId);
+         }
+      } else if (target.matches('.modal__close')) {
+         hideModal();
+      } else if (target.matches('.button_mini')) {
+         const orderModalDescr = document.getElementById('order').querySelector('.modal__descr');
+         const subtitle = target.closest('.catalog-item').querySelector('.catalog-item__subtitle').innerText;
+         orderModalDescr.innerText = subtitle;
+         showModal('order');
+      } else if (target === overlay) {
+         hideModal();
+      }
+   });
+
+   document.addEventListener('keydown', (e) => {
+      if (e.code === 'Escape' && overlay.style.display === 'block') {
+         hideModal();
+      }
+   });
+}
+
+modal('[data-modal]');
+modal('.button_mini');
