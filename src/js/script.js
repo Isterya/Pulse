@@ -184,9 +184,70 @@ document.addEventListener('DOMContentLoaded', () => {
    validateForms('#consultation form');
    validateForms('#order form');
 
+   // tel-input
    $('input[name=phone]')
       .mask('+380 (999) 999-99-99')
       .click(function () {
          this.setSelectionRange(6, 6);
       });
+
+   // sending email
+   $('form').submit(function (e) {
+      e.preventDefault();
+      $.ajax({
+         type: 'POST',
+         url: 'mailer/smart.php',
+         data: $(this).serialize(),
+      }).done(function () {
+         $(this).find('input').val('');
+         $('#consultation, #order').fadeOut();
+         $('.overlay, #thanks').fadeIn('slow');
+
+         $('form').trigger('reset');
+      });
+      return false;
+   });
+
+   // Smooth scroll and pageup
+
+   window.addEventListener('scroll', function () {
+      const pageup = document.querySelector('.pageup');
+      if (window.pageYOffset > 1600) {
+         pageup.classList.add('fadeIn');
+         pageup.style.display = 'block';
+         pageup.classList.remove('fadeOut');
+      } else {
+         pageup.classList.add('fadeOut');
+      }
+   });
+
+   const pageup = document.querySelector('.pageup');
+
+   pageup.addEventListener('click', (event) => {
+      const hash = pageup.hash;
+      const targetElement = document.querySelector(hash);
+
+      if (hash !== '' && targetElement) {
+         event.preventDefault();
+         const scrollTop = targetElement.getBoundingClientRect().top + window.pageYOffset;
+         const duration = 200;
+         const startPosition = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+         let startTime = null;
+
+         const scrollToPosition = (timestamp) => {
+            if (!startTime) startTime = timestamp;
+            const elapsed = timestamp - startTime;
+            const progress = elapsed / duration;
+            window.scrollTo(0, easeInOutQuad(startPosition, scrollTop, progress));
+            elapsed < duration ? requestAnimationFrame(scrollToPosition) : (window.location.hash = hash);
+         };
+
+         const easeInOutQuad = (start, end, progress) =>
+            progress < 0.5
+               ? 2 * progress * progress * (end - start) + start
+               : -1 + (4 - 2 * progress) * progress * (end - start) + start;
+
+         requestAnimationFrame(scrollToPosition);
+      }
+   });
 });
