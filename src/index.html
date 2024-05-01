@@ -8,7 +8,7 @@
       <link rel="stylesheet" href="css/bootstrap-reboot.min.css" />
       <link rel="stylesheet" href="css/font.css" />
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css" />
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+      <link rel="stylesheet" href="css/animate.css" />
       <link rel="stylesheet" href="css/style.css" />
       <link rel="stylesheet" href="css/style.min.css" />
    </head>
@@ -113,7 +113,7 @@
          </div>
       </section>
 
-      <section class="carousel">
+      <div class="carousel">
          <div class="container">
             <div class="carousel__inner">
                <div>
@@ -126,10 +126,10 @@
                   <img src="img/slider/slide_3.jpg" alt="slide" />
                </div>
             </div>
-            <button type="button" class="prev"><img src="../icons/left.svg" /></button>
-            <button type="button" class="next"><img src="../icons/right.svg" /></button>
+            <button type="button" class="prev"><img src="../icons/left.svg" alt="left" /></button>
+            <button type="button" class="next"><img src="../icons/right.svg" alt="right" /></button>
          </div>
-      </section>
+      </div>
 
       <section class="catalog">
          <div class="container">
@@ -151,13 +151,15 @@
                         </div>
                         <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
                      </div>
-                     <ul class="catalog-item__list">
-                        <li>Включает разнообразные инструменты для отслеживания физиологических параметров.</li>
-                        <li>AMOLED дисплей: яркий экран с высоким разрешением.</li>
-                        <li>Точная навигация по GPS и поддержка карт.</li>
-                        <li>Широкий спектр инструментов для тренировок и восстановления.</li>
+                     <div class="catalog-item__list">
+                        <ul>
+                           <li>Включает разнообразные инструменты для отслеживания физиологических параметров.</li>
+                           <li>AMOLED дисплей: яркий экран с высоким разрешением.</li>
+                           <li>Точная навигация по GPS и поддержка карт.</li>
+                           <li>Широкий спектр инструментов для тренировок и восстановления.</li>
+                        </ul>
                         <a href="#" class="catalog-item__back">Назад</a>
-                     </ul>
+                     </div>
                   </div>
                   <hr />
 
@@ -179,13 +181,15 @@
                         </div>
                         <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
                      </div>
-                     <ul class="catalog-item__list">
-                        <li>Сочетает в себе надежность военного класса и специализированное применение.</li>
-                        <li>Гарантированная автономная работа для тренировки без ограничений.</li>
-                        <li>Эргономичный дизайн для комфортного использования во время тренировок.</li>
-                        <li>Обширный набор технологий для эффективной работы над поставленными целями.</li>
+                     <div class="catalog-item__list">
+                        <ul>
+                           <li>Сочетает в себе надежность военного класса и специализированное применение.</li>
+                           <li>Гарантированная автономная работа для тренировки без ограничений.</li>
+                           <li>Эргономичный дизайн для комфортного использования во время тренировок.</li>
+                           <li>Обширный набор технологий для эффективной работы над поставленными целями.</li>
+                        </ul>
                         <a href="#" class="catalog-item__back">Назад</a>
-                     </ul>
+                     </div>
                   </div>
                   <hr />
 
@@ -207,13 +211,17 @@
                         </div>
                         <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
                      </div>
-                     <ul class="catalog-item__list">
-                        <li>Передовые технологии в области спутникового навигационного оборудования.</li>
-                        <li>Выдерживает экстремальные погодные условия, обеспечивая высокую степень надежности.</li>
-                        <li>Сочетание изящества и прочности в элегантном дизайне создает ауру силы и устойчивости.</li>
-                        <li>Обеспечивает стабильную и высокую производительность в самых экстремальных условиях.</li>
+                     <div class="catalog-item__list">
+                        <ul>
+                           <li>Передовые технологии в области спутникового навигационного оборудования.</li>
+                           <li>Выдерживает экстремальные погодные условия, обеспечивая высокую степень надежности.</li>
+                           <li>
+                              Сочетание изящества и прочности в элегантном дизайне создает ауру силы и устойчивости.
+                           </li>
+                           <li>Обеспечивает стабильную и высокую производительность в самых экстремальных условиях.</li>
+                        </ul>
                         <a href="#" class="catalog-item__back">Назад</a>
-                     </ul>
+                     </div>
                   </div>
                   <hr />
 
@@ -235,16 +243,18 @@
                         </div>
                         <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
                      </div>
-                     <ul class="catalog-item__list">
-                        <li>
-                           Корректирует план тренировок в зависимости от уровня нагрузки, предлагая персонализированные
-                           тренировки.
-                        </li>
-                        <li>Все возможности Polar Ignite доступны в Unite, единственное различие в GPS.</li>
-                        <li>Универсальный фитнес-трекер поможет вам лучше спать.</li>
-                        <li>Требует использования смартфона для отслеживания беговых тренировок.</li>
+                     <div class="catalog-item__list">
+                        <ul>
+                           <li>
+                              Корректирует план тренировок в зависимости от уровня нагрузки, предлагая
+                              персонализированные тренировки.
+                           </li>
+                           <li>Все возможности Polar Ignite доступны в Unite, единственное различие в GPS.</li>
+                           <li>Универсальный фитнес-трекер поможет вам лучше спать.</li>
+                           <li>Требует использования смартфона для отслеживания беговых тренировок.</li>
+                        </ul>
                         <a href="#" class="catalog-item__back">Назад</a>
-                     </ul>
+                     </div>
                   </div>
                   <hr />
 
@@ -266,13 +276,17 @@
                         </div>
                         <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
                      </div>
-                     <ul class="catalog-item__list">
-                        <li>Передовые технологии спутникового трекинга, объединенные с элегантностью дизайна.</li>
-                        <li>Выдерживает экстремальные погодные условия, служа надежным спутником.</li>
-                        <li>Сочетание изящного и прочного дизайна, укрепленного материалами военного класса.</li>
-                        <li>Каждый элемент дизайна, включая изгибы и контуры, отражает внутренний дух приключений.</li>
+                     <div class="catalog-item__list">
+                        <ul>
+                           <li>Передовые технологии спутникового трекинга, объединенные с элегантностью дизайна.</li>
+                           <li>Выдерживает экстремальные погодные условия, служа надежным спутником.</li>
+                           <li>Сочетание изящного и прочного дизайна, укрепленного материалами военного класса.</li>
+                           <li>
+                              Каждый элемент дизайна, включая изгибы и контуры, отражает внутренний дух приключений.
+                           </li>
+                        </ul>
                         <a href="#" class="catalog-item__back">Назад</a>
-                     </ul>
+                     </div>
                   </div>
                   <hr />
 
@@ -295,16 +309,18 @@
                         </div>
                         <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
                      </div>
-                     <ul class="catalog-item__list">
-                        <li>Улучшенная система ориентации и функция SleepWise для повышения бодрости.</li>
-                        <li>
-                           Отслеживает температуру кожи во время сна, обеспечивая пользователю дополнительную информацию
-                           о здоровье, особенно в контексте менструального цикла.
-                        </li>
-                        <li>Функция Work-Rest Guide: оценка частоты сердечных сокращений</li>
-                        <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
+                     <div class="catalog-item__list">
+                        <ul>
+                           <li>Улучшенная система ориентации и функция SleepWise для повышения бодрости.</li>
+                           <li>
+                              Отслеживает температуру кожи во время сна, обеспечивая пользователю дополнительную
+                              информацию о здоровье, особенно в контексте менструального цикла.
+                           </li>
+                           <li>Функция Work-Rest Guide: оценка частоты сердечных сокращений</li>
+                           <li>Вы сможете посмотреть данные по 10 тренировкам.</li>
+                        </ul>
                         <a href="#" class="catalog-item__back">Назад</a>
-                     </ul>
+                     </div>
                   </div>
                   <hr />
 
@@ -328,17 +344,21 @@
                         </div>
                         <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
                      </div>
-                     <ul class="catalog-item__list">
-                        <li>Предоставляют мощные инструменты с передовыми технологиями и GPS.</li>
-                        <li>
-                           Помогают тренироваться и восстанавливаться с умом, основываясь на данных о вашей активности.
-                        </li>
-                        <li>Полный спектр функций для различных видов спорта.</li>
-                        <li>
-                           Сверхлегкий корпус с новым GPS делает их идеальными для бега и повышения производительности.
-                        </li>
+                     <div class="catalog-item__list">
+                        <ul>
+                           <li>Предоставляют мощные инструменты с передовыми технологиями и GPS.</li>
+                           <li>
+                              Помогают тренироваться и восстанавливаться с умом, основываясь на данных о вашей
+                              активности.
+                           </li>
+                           <li>Полный спектр функций для различных видов спорта.</li>
+                           <li>
+                              Сверхлегкий корпус с новым GPS делает их идеальными для бега и повышения
+                              производительности.
+                           </li>
+                        </ul>
                         <a href="#" class="catalog-item__back">Назад</a>
-                     </ul>
+                     </div>
                   </div>
                   <hr />
 
@@ -360,13 +380,15 @@
                         </div>
                         <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
                      </div>
-                     <ul class="catalog-item__list">
-                        <li>Набор функций для амбициозных бегунов, обеспечивая эффективные тренировки.</li>
-                        <li>Точное измерение результатов без использования дополнительных устройств.</li>
-                        <li>Мгновенная обработки данных и быстрая реакция на команды пользователя.</li>
-                        <li>Читаемость в любых условиях с помощью передовой оптической технологии.</li>
+                     <div class="catalog-item__list">
+                        <ul>
+                           <li>Набор функций для амбициозных бегунов, обеспечивая эффективные тренировки.</li>
+                           <li>Точное измерение результатов без использования дополнительных устройств.</li>
+                           <li>Мгновенная обработки данных и быстрая реакция на команды пользователя.</li>
+                           <li>Читаемость в любых условиях с помощью передовой оптической технологии.</li>
+                        </ul>
                         <a href="#" class="catalog-item__back">Назад</a>
-                     </ul>
+                     </div>
                   </div>
                   <hr />
 
@@ -388,13 +410,17 @@
                         </div>
                         <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
                      </div>
-                     <ul class="catalog-item__list">
-                        <li>Обновленный процессор, AMOLED экран и увеличенный объем оперативной памяти.</li>
-                        <li>Помогает балансировать нагрузку и отдых, а также трекает сон и активность.</li>
-                        <li>Функции Sleep Gate, Nightly Recharge™ и SleepWise™ обеспечивают полный контроль.</li>
-                        <li>До 5 дней автономной работы или до 30 часов тренировок с активным GPS и трекингом ЧСС.</li>
+                     <div class="catalog-item__list">
+                        <ul>
+                           <li>Обновленный процессор, AMOLED экран и увеличенный объем оперативной памяти.</li>
+                           <li>Помогает балансировать нагрузку и отдых, а также трекает сон и активность.</li>
+                           <li>Функции Sleep Gate, Nightly Recharge™ и SleepWise™ обеспечивают полный контроль.</li>
+                           <li>
+                              До 5 дней автономной работы или до 30 часов тренировок с активным GPS и трекингом ЧСС.
+                           </li>
+                        </ul>
                         <a href="#" class="catalog-item__back">Назад</a>
-                     </ul>
+                     </div>
                   </div>
                   <hr />
 
@@ -417,16 +443,18 @@
                         </div>
                         <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
                      </div>
-                     <ul class="catalog-item__list">
-                        <li>Надежные часы для бега с длительным сроком службы и удобным дисплеем.</li>
-                        <li>Обеспечивают удобное отслеживание сердечного ритма и точный GPS для бегунов.</li>
-                        <li>Предоставляют необходимую информацию для занятий бегом без лишних усилий.</li>
-                        <li>
-                           Предоставляют всю необходимую информацию для современного бегуна, позволяя полностью
-                           погрузиться в бег без лишних усилий.
-                        </li>
+                     <div class="catalog-item__list">
+                        <ul>
+                           <li>Надежные часы для бега с длительным сроком службы и удобным дисплеем.</li>
+                           <li>Обеспечивают удобное отслеживание сердечного ритма и точный GPS для бегунов.</li>
+                           <li>Предоставляют необходимую информацию для занятий бегом без лишних усилий.</li>
+                           <li>
+                              Предоставляют всю необходимую информацию для современного бегуна, позволяя полностью
+                              погрузиться в бег без лишних усилий.
+                           </li>
+                        </ul>
                         <a href="#" class="catalog-item__back">Назад</a>
-                     </ul>
+                     </div>
                   </div>
                   <hr />
 
@@ -455,18 +483,20 @@
                         </div>
                         <a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
                      </div>
-                     <ul class="catalog-item__list">
-                        <li>
-                           Непрерывное следение за физической формой и результатами тренировок для поддержания здорового
-                           образа жизни.
-                        </li>
-                        <li>
-                           Легкая замена браслетов и выбор из различных циферблатов для создания уникального стиля.
-                        </li>
-                        <li>Ремешки двух размеров обеспечивают идеальную посадку.</li>
-                        <li>Обеспечивают надежное функционирование в течение дня без частой зарядки.</li>
+                     <div class="catalog-item__list">
+                        <ul>
+                           <li>
+                              Непрерывное следение за физической формой и результатами тренировок для поддержания
+                              здорового образа жизни.
+                           </li>
+                           <li>
+                              Легкая замена браслетов и выбор из различных циферблатов для создания уникального стиля.
+                           </li>
+                           <li>Ремешки двух размеров обеспечивают идеальную посадку.</li>
+                           <li>Обеспечивают надежное функционирование в течение дня без частой зарядки.</li>
+                        </ul>
                         <a href="#" class="catalog-item__back">Назад</a>
-                     </ul>
+                     </div>
                   </div>
                   <hr />
 
@@ -484,7 +514,7 @@
 
       <section class="feedback">
          <div class="container">
-            <div class="title wow animate__animated animate__fadeInUp animate__slow">Отзывы клиентов</div>
+            <h2 class="title wow animate__animated animate__fadeInUp animate__slow">Отзывы клиентов</h2>
             <div class="feedback__item wow animate__animated animate__fadeInUp animate__delay-1s animate__slow">
                <img src="img/feedback/feedback_1.png" alt="feedback_1" class="feedback__img" />
                <div class="feedback__text">
@@ -541,8 +571,6 @@
          <!-- <div class="footer__map"></div> -->
          <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2244.43048007664!2d37.646996!3d55.768395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a636edcd2ad%3A0x4c2ca101e2c8c617!2z0JzRj9GB0L3QuNGG0LrQuNC5INC_0YAt0LQsIDQvMywg0JzQvtGB0LrQstCwLCDQoNC-0YHRgdC40Y8sIDEwNzA3OA!5e0!3m2!1sru!2spl!4v1714218439256!5m2!1sru!2spl"
-            width="100%"
-            height="630"
             style="border: 0"
             allowfullscreen=""
             loading="lazy"
@@ -558,7 +586,7 @@
             </div>
          </div>
       </footer>
-
+      <br />
       <div class="overlay">
          <div class="modal" id="consultation">
             <div class="modal__close">&times;</div>
@@ -598,11 +626,8 @@
       </a>
 
       <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-      <script
-         type="text/javascript"
-         src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.2.1/jquery-migrate.min.js"
-      ></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/1.2.1/jquery-migrate.min.js"></script>
       <script src="js/jquery.validate.min.js"></script>
       <script src="js/jquery.maskedinput.min.js"></script>
       <script src="js/wow.min.js"></script>
