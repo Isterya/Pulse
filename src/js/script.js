@@ -250,4 +250,7 @@ document.addEventListener('DOMContentLoaded', () => {
          requestAnimationFrame(scrollToPosition);
       }
    });
+
+   // Scroll animation
+   new WOW().init();
 });
