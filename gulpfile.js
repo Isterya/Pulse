@@ -5,13 +5,12 @@ const cleanCSS = require('gulp-clean-css');
 const autoprefixer = require('gulp-autoprefixer');
 const rename = require('gulp-rename');
 const imagemin = require('gulp-imagemin');
-const tinypng = require('gulp-tinypng');
 const htmlmin = require('gulp-htmlmin');
 
 gulp.task('server', function () {
    browserSync({
       server: {
-         baseDir: 'src',
+         baseDir: 'dist',
       },
    });
 
@@ -33,7 +32,7 @@ gulp.task('styles', function () {
 gulp.task('watch', function () {
    gulp.watch('src/sass/**/*.+(scss|sass|css)', gulp.parallel('styles'));
    gulp.watch('src/*.html').on('change', gulp.series('html', browserSync.reload));
-   gulp.watch('src/img/**/*.*', gulp.parallel('images'));
+   gulp.watch('src/img/**/*', gulp.parallel('images'));
 });
 
 gulp.task('html', function () {
