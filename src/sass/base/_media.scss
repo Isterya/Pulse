@@ -1,0 +1,99 @@
+@media (max-width: 1200.5px) {
+   .promo {
+      padding: 21px 15px 93px 15px;
+      &__header {
+         font-size: 40px;
+      }
+      &__subheader {
+         font-size: 23px;
+      }
+   }
+   .advantages {
+      padding: 65px 15px 60px 15px;
+      &__descr {
+         font-size: 13px;
+      }
+   }
+   .consultation {
+      padding: 100px 25px 92px 25px;
+      &__descr {
+         font-size: 19px;
+      }
+   }
+   .button {
+      &_main {
+         width: 285px;
+         height: 45px;
+      }
+   }
+   .title {
+      &__left {
+         font-size: 30px;
+      }
+   }
+   .carousel {
+      .tns-item {
+         img {
+            width: 75%;
+         }
+      }
+      .prev,
+      .next {
+         left: -20px;
+         img {
+            width: 75%;
+         }
+      }
+      .next {
+         right: 50px;
+         left: auto;
+      }
+   }
+}
+
+@media (max-width: 991.5px) {
+   .promo {
+      padding: 21px 20px 85px 15px;
+   }
+   .advantages {
+      padding: 60px 15px 55px 15px;
+      &__descr {
+         margin-top: 15px;
+      }
+      &__subtitle {
+         font-size: 17px;
+      }
+      &__item {
+         max-width: 220px;
+      }
+   }
+   .consultation {
+      padding: 75px 25px 75px 25px;
+   }
+   .carousel {
+      .tns-item {
+         img {
+            width: 65%;
+         }
+      }
+      .prev,
+      .next {
+         left: 50px;
+         img {
+            width: 75%;
+         }
+      }
+      .next {
+         right: 50px;
+         left: auto;
+      }
+   }
+   .title {
+      font-size: 29px;
+      &_left {
+         line-height: 45px;
+      }
+   }
+}
+
+// TO DO
